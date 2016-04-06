@@ -9,4 +9,4 @@ RUN mkdir /usr/src/enricher
 RUN pip install boto luigi datetime kafka-python psycopg2 requests pysparkling pandas tldextract
 RUN git clone https://github.com/adqio/python-confluent-schemaregistry.git && cd python-confluent-schemaregistry && python setup.py bdist_egg && cp dist/*.egg ../enricher
 RUN git clone https://github.com/dpkp/kafka-python.git && cd kafka-python && python setup.py bdist_egg && cp dist/*.egg ../enricher 
-RUN git clone https://github.com/tebeka/fastavro.git && cd fastavro && python setup.py bdist_egg && cp dist/*.egg ../enricher
+RUN git clone https://github.com/adqio/fastavro.git && cd fastavro && python setup.py bdist_egg && cp dist/*.egg ../enricher
