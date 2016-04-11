@@ -10,5 +10,6 @@ RUN pip install boto luigi datetime psycopg2 requests pysparkling pandas pyyaml 
 RUN git clone https://github.com/adqio/python-confluent-schemaregistry.git && cd python-confluent-schemaregistry && python setup.py bdist_egg && cp dist/*.egg ../enricher
 RUN git clone https://github.com/adqio/fastavro.git && cd fastavro && python setup.py bdist_egg && cp dist/*.egg ../enricher
 RUN git clone https://github.com/Parsely/pykafka.git && cd pykafka && python setup.py bdist_egg && cp dist/*.egg ../enricher
+RUN git clone https://github.com/dpkp/kafka-python.git && cd kafka-python && python setup.py bdist_egg && cp dist/*.egg ../enricher
 RUN git clone https://github.com/john-kurkowski/tldextract.git && cd pykafka && python setup.py bdist_egg && cp dist/*.egg ../enricher
 RUN git clone https://github.com/yaml/pyyaml.git && cd pyyaml && python setup.py bdist && cd dist && tar -zxvf *.tar.gz && cd usr/local/lib/python2.7/dist-packages && zip -r pyyaml.zip yaml && cp pyyaml.zip /usr/src/enricher
