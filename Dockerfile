@@ -1,7 +1,6 @@
 FROM  ubuntu:15.10
 
 ENV DEBIAN_FRONTEND noninteractive
-
 RUN apt-get -y update && apt-get -y install python-dev python-pip build-essential git libpq-dev vim postgresql-client postgresql zip vim
 WORKDIR /usr/src/ 
 RUN mkdir -p /mnt/data/manifests && mkdir -p /mnt/data/markers &&  mkdir /usr/src/enricher
