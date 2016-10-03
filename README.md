@@ -1,2 +1,2 @@
 # docker-python
-Our base python Docker image. 
+The A|D base python Docker image. 
